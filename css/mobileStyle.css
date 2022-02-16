@@ -7,7 +7,7 @@
   header {
     grid-area: header;
     display: flex;
-    background-color:lightgrey;
+    background-image: linear-gradient(to top, white, lightgrey);
     align-items: center;
     justify-content: space-between;
     padding: 0 15px;
@@ -155,7 +155,24 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+  }
+
+  .animacionAparecer {
+    animation-name: aparecer;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
   } 
+
+  @keyframes aparecer {
+      0% {
+          opacity: 0;
+      }
+
+      100% {
+          opacity: 1;
+      }
+  }
 
 /* footer */
   footer {
@@ -164,6 +181,6 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background-color:lightgrey;
+    background-image: linear-gradient(to top, white, lightgrey);
   }
 }

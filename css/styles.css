@@ -9,7 +9,7 @@
     header {
         grid-area: header;
         display: flex;
-        background-color:lightgrey;
+        background-image: linear-gradient(to top, white, lightgrey);
         align-items: center;
         justify-content: space-between;
         padding: 0 15%;
@@ -71,10 +71,10 @@
         font-size: 50px;
         font-family: 'Roboto', sans-serif;
     }
-    
+        
     .image1 { 
         grid-area: image1;
-        background-image: url(../imagenes/Leo.jpeg);
+        background-image: linear-gradient(to right, rgba(255,255,255,0.75),rgba(255,255,255,0)),url(../imagenes/Leo.jpeg);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -174,6 +174,23 @@
         background-repeat: no-repeat;
     }
 
+    .animacionAparecer {
+        animation-name: aparecer;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 2s;
+    }
+
+    @keyframes aparecer {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
 /* footer */
     footer {
         grid-area: footer;
@@ -183,198 +200,6 @@
         text-align: center;
         font-family: 'Roboto', sans-serif;
         font-size: 15px;
-        background-color:lightgrey;
+        background-image: linear-gradient(to top, white, lightgrey);
     }
 }  
-    
-    /* 
-   
-    .index {
-        display: grid;
-        min-width: 100%;
-        min-height: 1240px;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 50%);
-        align-items: center;
-        justify-items: center;
-    }
-
-    .item {
-        display: flex;
-    }
-
-    .item1 {
-        grid-column: 1/2;
-        grid-row-end: 1/2;
-        font-size: 50px;
-        font-family: 'Roboto', sans-serif;
-        text-align: center;
-    }
-
-    .item2 {
-        grid-column: 2/3;
-        grid-row-end: 1/2;
-    }
-
-    .item3 {
-        grid-column: 1/2;
-        grid-row-end: 2/3;
-    }
-
-    .item4 {
-        grid-column: 2/3;
-        grid-row-end: 2/3;
-    }
-
-    .item4 div h2 {
-        font-size: 50px;
-        font-family: 'Roboto', sans-serif;
-        text-align: center;
-        margin-bottom: 40px;
-    }
-
-    .item4 div p {
-        width: 560px;
-        font-family: 'Roboto', sans-serif;
-    }
-
-    footer {
-        display: flex;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        background-color:lightgrey;
-        justify-content: center;
-    }
-
-    footer div {
-        text-align: center;
-        font-family: 'Roboto', sans-serif;
-    }
-
-    .tituloSeccion {
-        font-family: 'Roboto', sans-serif;
-        font-size: 50px;
-        margin-left: 280px;
-        margin-bottom: 80px;
-    }
-
-    #etapaEstudio1 {
-        text-align: center;
-        margin-bottom: 100px;
-    }
-
-    #etapaEstudio1 div {
-        display: inline-block   ;
-        text-align: center;
-        width: 500px;
-        vertical-align: middle;
-        margin-right: 100px;
-    }
-
-    #etapaEstudio1 div h3{
-        font-family: 'Roboto', sans-serif;
-        font-size: 35px;
-        margin-bottom: 40px;
-    }
-
-    #etapaEstudio1 img {
-        display: inline-block;
-        vertical-align: middle;
-    }
-
-    #etapaEstudio2 {
-        text-align: center;
-        margin-bottom: 100px;
-    }
-
-    #etapaEstudio2 div {
-        display: inline-block   ;
-        text-align: center;
-        width: 500px;
-        vertical-align: middle;
-        margin-left: 100px;
-    }
-
-    #etapaEstudio2 div h3{
-        font-family: 'Roboto', sans-serif;
-        font-size: 35px;
-        margin-bottom: 40px;
-    }
-
-    #etapaEstudio2 div p {
-        display: inline-block;
-        width: 500px;
-        vertical-align: middle;
-    }
-
-    #etapaEstudio2 img {
-        display: inline-block;
-        vertical-align: middle;
-    }
-
-    .mesActividad {
-        font-family: 'Roboto', sans-serif;
-        font-size: 35px;
-        margin-left: 280px;
-        margin-bottom: 30px;
-    }
-
-    .actividadesPorMes {
-        text-align: center;
-    }
-
-    .elementoListaActividad {
-        margin-bottom: 30px;
-    }
-
-    .elementoListaActividad div div {
-        display: inline-block;
-        vertical-align: middle;
-        width: 500px;
-        margin-left: 100px;
-    }
-
-    .elementoListaActividad div img {
-        vertical-align: middle;
-    }
-
-    .listaVideos {
-        text-align: center;
-    }
-
-    .listaVideos li {
-        display: inline-block;
-    }
-
-    .listaVideos li div {
-        margin-right: 30px;
-        margin-bottom: 30px;
-    }
-
-    .listaVideos li div p {
-        width: 533.34px;
-    }
-
-    .listaSedes {
-        text-align: center;
-    }
-
-    .listaSedes li {
-        display: inline-block;
-        margin-right: 10px;
-        margin-bottom: 50px;
-    }
-
-    .listaSedes li div p {
-        width: 300px;
-    }
-
-    #formularioContacto {
-        text-align: center;
-    }
-
-    #formularioContacto h3 {
-        font-family: 'Roboto', sans-serif;
-        font-size: 35px;
-        margin-bottom: 20px;
-    } */
