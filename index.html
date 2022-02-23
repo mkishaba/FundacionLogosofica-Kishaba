@@ -43,30 +43,70 @@
     <!-- Navbar de bootstrap - fin -->
 
     <!-- banner principal - inicio -->
-    <div class="container-fluid banner">
-        <div class="row">
-            
-            <div class="col text1 align-self-center">
-                <h1>Conocimientos <br> para una <br> Evolución Consciente</h1>
-            </div>
-            
-            <div class="col img1"></div>
+    <div id="demo" class="carousel slide" data-ride="carousel">
 
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+      
+        <div class="carousel-inner">
+          <div class="carousel-item active container-fluid banner">
+            <div class="row">
+
+                <div class="col-xl-6 col-md-12 text1 align-self-center">
+                    <h1>Conocimientos <br> para una <br> Evolución Consciente</h1>
+                </div>
+                
+                <div class="col-xl-6 col-md-12 img1"></div>
+    
+            </div>
+          </div>
+          <div class="carousel-item container-fluid banner">
+            <div class="row">
+
+                <div class="col-xl-6 col-md-12 text1 align-self-center">
+                    <h1>Conocimientos <br> para una <br> Evolución Consciente</h1>
+                </div>
+                
+                <div class="col-xl-6 col-md-12 img1"></div>
+    
+            </div>
+          </div>
+          <div class="carousel-item container-fluid banner">
+            <div class="row">
+
+                <div class="col-xl-6 col-md-12 text1 align-self-center">
+                    <h1>Conocimientos <br> para una <br> Evolución Consciente</h1>
+                </div>
+                
+                <div class="col-xl-6 col-md-12 img1"></div>
+    
+            </div>
+          </div>
         </div>
-    </div>
+      
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      
+      </div>
     <!-- banner principal - fin -->
 
-
     <!-- section "Sobre nosotros" - inicio -->
-    <div class="container-fluid banner" id="sobreNosotros">
+    <div class="container-fluid banner">
         <div class="row">
-            <iframe class="col" width="100%" src="https://www.youtube.com/embed/kXIQIDb3-F4" title="YouTube video player"
+            <iframe class="col-xl-6 col-md-12" height="500px" src="https://www.youtube.com/embed/kXIQIDb3-F4" title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
             </iframe>
 
-            <div class="col align-self-center" id="sobreNosotros">
+            <div class="col-xl-6 col-md-12 align-self-center" id="sobreNosotros">
                 <h2>Sobre Nosotros</h2>
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam accusantium ipsam dolorem, tempore, eum repellat repudiandae nemo sint ab aliquam fugiat quis ratione nesciunt accusamus perferendis, labore similique? Corporis, harum.
@@ -81,9 +121,12 @@
     <!-- section "Sobre nosotros" - fin -->
 
     <footer>
-        <h6>Contacto</h6>
-        <h6>Dirección: Av. Coronel Diaz 1774 CABA</h6>
-        <h6>Teléfono: (011) 4824-4383</h6>
+        <ul>
+            <li><a href="https://www.instagram.com/fundacionlogosofica/"><img src="https://icongr.am/fontawesome/instagram.svg?size=35&color=currentColor"></a></li>
+            <li><a href="https://www.facebook.com/fundacionlogosofica/"><img src="https://icongr.am/fontawesome/facebook.svg?size=35&color=currentColor"></a></li>
+            <li><a href="https://www.linkedin.com/company/fundaci-n-logos-fica/"><img src="https://icongr.am/fontawesome/linkedin.svg?size=35&color=currentColor"></a></li>
+            <li><a href="https://www.youtube.com/user/FundacionLogosofica"><img src="https://icongr.am/fontawesome/youtube.svg?size=35&color=currentColor"></a></li>
+        </ul>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
