@@ -43,7 +43,7 @@
   .image1 {
     grid-area: image1;
     background-image: url("../imagenes/Leo.jpeg");
-    background-position: center;
+    background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -105,10 +105,10 @@
     text-align: justify;
   }
 
-  .imagenCurso {
+  .imagenCurso, .imagenEstudio {
     grid-area: imagenCurso;
     background-image: url("../imagenes/Leo.jpeg");
-    background-position: center;
+    background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -131,11 +131,7 @@
   }
 
   .imagenEstudio {
-    grid-area: imagenEstudio;
-    background-image: url(../imagenes/Leo.jpeg);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-image: url("../imagenes/Leo.jpeg");
   }
 
   .animacionAparecer {

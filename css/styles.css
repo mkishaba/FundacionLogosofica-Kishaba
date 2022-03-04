@@ -89,22 +89,19 @@ h2 {
 }
 /* index.html - fin */
 /* estudiaLogosofia.html - inicio */
-.imgCurso {
+.imgCurso, .imgEstudio {
   height: 540px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0)), url("../imagenes/Leo.jpeg");
+  background-image: url("../imagenes/Leo.jpeg");
   background-position: right;
   background-size: contain;
   background-repeat: no-repeat;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0)), url("../imagenes/Leo.jpeg");
 }
 
 .imgEstudio {
-  height: 540px;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0)), url("../imagenes/Leo.jpeg");
-  background-position: right;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 /* estudiaLogosofia.html - fin */
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=Styles.css.map */

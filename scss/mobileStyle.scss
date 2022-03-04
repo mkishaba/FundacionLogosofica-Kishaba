@@ -1,5 +1,14 @@
-$colorFondo: lightgrey;
-$imagenLeo: "../imagenes/Leo.jpeg";
+$mapaVariables: (
+    colorFondo:lightgrey,
+    imagenLeo: "../imagenes/Leo.jpeg"
+);
+
+@mixin backgroundImg($image, $position, $size, $repeat) {
+  background-image: $image;
+  background-position: $position;
+  background-size: $size;
+  background-repeat: $repeat;
+}
 
 * {
     margin: 0;
@@ -10,7 +19,7 @@ $imagenLeo: "../imagenes/Leo.jpeg";
   header {
     grid-area: header;
     display: flex;
-    background-image: $colorFondo;
+    background-image: map-get($mapaVariables, colorFondo);;
     align-items: center;
     justify-content: space-between;
     padding: 0 15px;
@@ -52,10 +61,7 @@ $imagenLeo: "../imagenes/Leo.jpeg";
   
   .image1 { 
     grid-area: image1;
-    background-image: url($imagenLeo);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    @include backgroundImg(url(map-get($mapaVariables, imagenLeo)), right, contain, no-repeat);
   }
   
   .text2 { 
@@ -124,10 +130,7 @@ $imagenLeo: "../imagenes/Leo.jpeg";
   
   .imagenCurso {
     grid-area: imagenCurso;
-    background-image: url($imagenLeo);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    @include backgroundImg(url(map-get($mapaVariables, imagenLeo)), right, contain, no-repeat);
   }
 
   .textoEstudio {
@@ -148,11 +151,8 @@ $imagenLeo: "../imagenes/Leo.jpeg";
   }
   
   .imagenEstudio {
-    grid-area: imagenEstudio;
-    background-image: url(../imagenes/Leo.jpeg);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    @extend .imagenCurso;
+    background-image: url(map-get($mapaVariables, imagenLeo));
   }
 
   .animacionAparecer {

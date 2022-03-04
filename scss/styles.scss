@@ -1,5 +1,14 @@
-$colorFondo: lightgrey;
-$imagenLeo: "../imagenes/Leo.jpeg";
+$mapaVariables: (
+    colorFondo:lightgrey,
+    imagenLeo: "../imagenes/Leo.jpeg"
+);
+
+@mixin backgroundImg($image, $position, $size, $repeat) {
+    background-image: $image;
+    background-position: $position;
+    background-size: $size;
+    background-repeat: $repeat;
+}
 
 * {
     margin: 0;
@@ -7,7 +16,7 @@ $imagenLeo: "../imagenes/Leo.jpeg";
 }
 
 .navbar {
-    background-color: $colorFondo;
+    background-color: map-get($mapaVariables, colorFondo);
 }
 
 .banner {
@@ -19,7 +28,7 @@ footer {
     justify-content: center;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    background-color: $colorFondo;
+    background-color: map-get($mapaVariables, colorFondo);
     padding: 5px;
     margin-top: 10px;
     ul {
@@ -57,10 +66,7 @@ h2 {
 
     .img1 {
         height: 700px;
-        background-image: url($imagenLeo);
-        background-position: right;
-        background-size: contain; 
-        background-repeat: no-repeat;
+        @include backgroundImg(url(map-get($mapaVariables, imagenLeo)), right, contain, no-repeat);
     }
 }
 
@@ -75,10 +81,7 @@ h2 {
     
     .img1 {
         height: 300px;
-        background-image: url($imagenLeo);
-        background-position: right;
-        background-size: contain; 
-        background-repeat: no-repeat;
+        @include backgroundImg(url(map-get($mapaVariables, imagenLeo)), right, contain, no-repeat);
     }
 
     #sobreNosotros {
@@ -100,17 +103,14 @@ h2 {
 /* estudiaLogosofia.html - inicio */
 .imgCurso {
     height: 540px;
-    background-image: linear-gradient(to right, rgba(255,255,255,0.75),rgba(255,255,255,0)),url($imagenLeo);
-    background-position: right;
-    background-size: contain; 
-    background-repeat: no-repeat;
+    @include backgroundImg(url(map-get($mapaVariables, imagenLeo)), right, contain, no-repeat);
+    background-image: linear-gradient(to right, rgba(255,255,255,0.75),rgba(255,255,255,0)),url(map-get($mapaVariables, imagenLeo));
+    
 }
 
 .imgEstudio {
-    height: 540px;
-    background-image: linear-gradient(to right, rgba(255,255,255,0.75),rgba(255,255,255,0)),url($imagenLeo);
-    background-position: right;
-    background-size: contain; 
-    background-repeat: no-repeat;
+    @extend .imgCurso;
+    background-image: linear-gradient(to right, rgba(255,255,255,0.75),rgba(255,255,255,0)),url(map-get($mapaVariables, imagenLeo));
 }
+
 /* estudiaLogosofia.html - fin */
